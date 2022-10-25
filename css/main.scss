@@ -1,0 +1,78 @@
+// Include custom variables default overrides here
+
+$primary: #dfdfdf;
+$gray: #faa1a1;
+
+$theme-colors: (
+    "primary": $primary,
+    "gray": $gray
+);
+
+// Create your map
+$custom-color: (
+
+);
+
+// Merge maps
+$theme-colors: map-merge($theme-colors,$custom-color);
+
+@import "./bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+
+
+/*********HEADER*********/
+
+.announcement-bar{
+  font-size: 0.8rem;
+  border-bottom: 1px solid var(--bs-gray);
+  background-color: #dadada;
+  color: #0a0101;
+
+  &__list{
+    padding:0;
+    margin: 0;
+    list-style-type: none;
+    display: inline-flex;
+    margin: 0 -10px;
+
+    li{
+      margin: 0 10px;
+      align-items: center;
+    }
+  }
+
+  @include media-breakpoint-down(lg){
+    display:none;
+
+  }
+}
+
+/* Main menu*/
+
+.main-navigation{
+  font-weight: 700;
+
+  .current-menu-item{
+    background-color: #bd5d14;
+  }
+
+  a{
+    color: var(--bs-white);
+    padding: 1rem 1.4rem;
+  }
+
+  a:hover{
+    color: #14bd3e;
+    padding: 1rem 1.4rem;
+  }
+}
+
+.carousel-item {
+  $carousel-transition-duration:transform 2s ease, opacity .5s ease-out;
+  $carousel-control-transition:        opacity 1.15s ease;
+  $carousel-control-icon-width:        20rem;
+
+
+}
+
